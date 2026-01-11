@@ -21,12 +21,15 @@
 }
 
 @font-face {
-  font-family: 'Inter Variable';
+  font-family: "Inter Variable";
   font-style: normal;
   font-display: swap;
   font-weight: 100 900;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2)
+    format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 body {
@@ -56,14 +59,14 @@ h1 {
 
 h1 + p {
   text-wrap: balance;
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
 }
 
 /* header */
 header {
   border-bottom: 1px solid var(--border);
   background: var(--background);
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,7 +91,8 @@ nav {
     transition: color 0.2s;
     font-weight: 500;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: var(--primary);
       outline: none;
     }
@@ -126,7 +130,11 @@ main > section:nth-child(1) {
     z-index: -1;
     left: 0;
     right: 0;
-    mask-image: linear-gradient(to bottom, rgba(16, 25, 34, 1) 5%, rgba(16, 25, 34, 0) 80%);
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(16, 25, 34, 1) 5%,
+      rgba(16, 25, 34, 0) 80%
+    );
   }
 }
 
@@ -183,19 +191,19 @@ button {
   font-size: 1rem;
   white-space: nowrap;
 
-  &:hover, /* pseudo-clase que significa que el ratón está encima */
-  &:focus { /* pseudo-clase que significa que el elemento tiene el foco */
+  &:hover,
+  &:focus {
     background-color: var(--primary-hover);
     outline: 2px solid white;
     outline-offset: 2px;
   }
 
-  &:active { 
-    transform: scale(0.90)
+  &:active {
+    transform: scale(0.9);
   }
 
   &:disabled {
-    opacity: .5;
+    opacity: 0.5;
     pointer-events: none;
   }
 }
@@ -214,7 +222,7 @@ main > section:nth-child(2) {
     }
 
     p {
-      opacity: .75;
+      opacity: 0.75;
     }
   }
 
@@ -287,5 +295,86 @@ article {
   h3 {
     font-weight: 500;
   }
+}
 
-} 
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #1f2937; /* gris oscuro como en tu ejemplo */
+  color: white;
+  border-radius: 6px;
+  border: 1px solid #374151;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  /* transition: all 0.15s ease; */
+  user-select: none;
+}
+
+/* .filter-btn:hover {
+  background-color: #374151;
+  border-color: #4b5563;
+} */
+
+/* .filter-btn:active {
+  transform: translateY(1px);
+} */
+
+.chevron {
+  transition: transform 0.2s ease;
+}
+
+.filter-btn.open .chevron {
+  transform: rotate(180deg);
+}
+
+.job-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 16px;
+}
+
+.job-card:first-child {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.job-card:last-child {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.job-card + .job-card {
+  border-top: none;
+}
+
+.job-title {
+  margin: 0 0 6px 0;
+  font-weight: 500;
+}
+
+.job-company {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.job-description {
+  margin: 0;
+  font-size: 14px;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+.job-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: var(--primary-light);
+  color: white;
+  cursor: pointer;
+}
