@@ -496,3 +496,24 @@ article {
     cursor: not-allowed;
   }
 }
+
+.checklist {
+  list-style: none; /*Quita los puntos*/
+  padding: 0;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-secondary);
+}
+
+.checklist li svg {
+  width: 20px;
+  height: 20px;
+  color: #3b82f6; 
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+

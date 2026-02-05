@@ -22,7 +22,9 @@
 // Event Bubbling
 // ("Uso de event delegation para manejar múltiples botones de aplicar trabajo"); 
 const jobsListingSection = document.querySelector(".jobs-listings");
-jobsListingSection.addEventListener("click", (event) => {
+
+// Usamos opcional chaining "?" para evitar errores si el elemento no existe
+jobsListingSection?.addEventListener("click", (event) => {
   console.log(event.target);
   
   const elementClicked = event.target;
@@ -34,4 +36,38 @@ jobsListingSection.addEventListener("click", (event) => {
     elementClicked.disabled = true;
     elementClicked.title = "Ya aplicaste a esta oferta"; // Actualiza el título no va a estar activo porque está deshabilitado
   }
+});
+
+
+// filters
+const filter = document.querySelector("#filter-location");
+const mensaje = document.querySelector("#filter-selected-value");
+
+filter.addEventListener("change", () => {
+  // console.log("Filtro cambiado:", event.target.value);
+  const selectedValue = filter.value;
+
+  if(selectedValue){
+    mensaje.textContent = `Seleccionaste: ${selectedValue}`;
+  } else {
+    mensaje.textContent = "";
+  }
+});
+
+const searchInput = document.querySelector("#job-search-input");
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toUpperCase();
+  console.log("Busqueda:", query); 
+});
+
+searchInput.addEventListener("blur", () => {
+  searchInput.value = "";
+  console.log("Busqueda limpiada"); 
+});
+
+
+const searchForm = document.querySelector("#job-search-form");
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault(); 
+  console.log("Formulario de búsqueda enviado");
 });
