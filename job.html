@@ -80,6 +80,12 @@
 
           <div class="search-filters">
             <select name="technology" id="filter-technology">
+              <optgroup label="Tecnologías populares">
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+              </optgroup>
+              <hr/>
               <option value="">Tecnología</option>
               <option value="javascript">JavaScript</option>
               <option value="python">Python</option>
@@ -111,7 +117,7 @@
       </section>
 
       <div class="jobs-listings">
-        <article class="job-listing-card">
+        <article data-modalidad="remoto" class="job-listing-card">
           <div>
             <h3>Ingeniero de Software</h3>
             <small>Tech Solutions Inc. | Remoto</small>
@@ -127,7 +133,7 @@
           </button>
         </article>
 
-        <article class="job-listing-card">
+        <article data-modalidad="cdmx" class="job-listing-card">
           <div>
             <h3>Analista de Datos</h3>
             <small>Data Driven Co. | Ciudad de México</small>
@@ -140,7 +146,7 @@
           <button class="button-apply-job">Aplicar</button>
         </article>
 
-        <article class="job-listing-card">
+        <article data-modalidad="guadalajara" class="job-listing-card">
           <div>
             <h3>Desarrollador de Aplicaciones Móviles</h3>
             <small>Mobile Apps Ltd. | Guadalajara</small>
@@ -153,7 +159,7 @@
           <button class="button-apply-job">Aplicar</button>
         </article>
 
-        <article class="job-listing-card">
+        <article data-modalidad="remoto" class="job-listing-card">
           <div>
             <h3>Ingeniero de DevOps</h3>
             <small>Cloud Services SA | Remoto</small>
