@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <title>Document</title>
@@ -30,7 +30,7 @@
       </nav>
 
       <div style="display: flex; gap: 10px; align-items: center">
-        <button type="button">Subir cv</button>
+        <!-- <button type="button">Subir cv</button>
         <img
           src="the-mandalorian-minimalist-uhdpaper.com-4K-7.766.jpg"
           style="
@@ -43,7 +43,28 @@
           "
           alt=""
           title="El camino así es"
-        />
+        /> -->
+        <devjobs-avatar
+          service="github"
+          username="elvis-crespo"
+          size="40"
+          title="El camino así es"
+        >
+        </devjobs-avatar>
+        <devjobs-avatar
+          service="x"
+          username=""
+          size="40"
+          title="El camino así es"
+        >
+        </devjobs-avatar>
+        <devjobs-avatar
+          service="google"
+          username="google.com"
+          size="40"
+          title="El camino así es"
+        >
+        </devjobs-avatar>
       </div>
     </header>
 
@@ -70,7 +91,7 @@
               <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
               <path d="M21 21l-6 -6" />
             </svg>
-            <input 
+            <input
               id="job-search-input"
               type="text"
               placeholder="Buscar trabajos, empresas o habilidades"
@@ -80,18 +101,23 @@
 
           <div class="search-filters">
             <select name="technology" id="filter-technology">
+              <option value="">Tecnología</option>
+
               <optgroup label="Tecnologías populares">
                 <option value="javascript">JavaScript</option>
                 <option value="python">Python</option>
                 <option value="java">Java</option>
               </optgroup>
               <hr/>
-              <option value="">Tecnología</option>
-              <option value="javascript">JavaScript</option>
-              <option value="python">Python</option>
-              <option value="java">Java</option>
-              <option value="react">React</option>
-              <option value="nodejs">Node.js</option>
+              <optgroup label="Frontend">
+                <option value="react">React</option>
+              </optgroup>
+              <hr>
+              <optgroup label="Backend">
+                <option value="nodejs">Node.js</option>
+              </optgroup>
+              <hr>
+              <option value="mobile">Mobile</option>
             </select>
 
             <select name="location" id="filter-location">
@@ -106,72 +132,21 @@
             <select name="experience-level" id="filter-experience-level">
               <option value="">Nivel de experiencia</option>
               <option value="junior">Junior</option>
-              <option value="mid">Mid-Level</option>
+              <option value="mid-level">Mid-Level</option>
               <option value="senior">Senior</option>
               <option value="lead">Lead</option>
             </select>
 
             <span id="filter-selected-value"></span>
+            <span id="filter-selected-value-experience-level"></span>
+            <span id="filter-selected-value-technology"></span>
           </div>
         </form>
       </section>
 
       <div class="jobs-listings">
-        <article data-modalidad="remoto" class="job-listing-card">
-          <div>
-            <h3>Ingeniero de Software</h3>
-            <small>Tech Solutions Inc. | Remoto</small>
-            <p>
-              Buscamos un ingeniero de software con experiencia en desarrollo
-              web y conocimientos en JavaScript, React y Node.js. El candidato
-              ideal debe ser capaz de trabajar en equipo y tener buenas
-              habilidades de comunicación.
-            </p>
-          </div>
-          <button class="button-apply-job" id="boton-importante">
-            Aplicar
-          </button>
-        </article>
-
-        <article data-modalidad="cdmx" class="job-listing-card">
-          <div>
-            <h3>Analista de Datos</h3>
-            <small>Data Driven Co. | Ciudad de México</small>
-            <p>
-              Estamos buscando un analista de datos con experiencia en el manejo
-              de grandes conjuntos de datos y herramientas de visualización. Se
-              requiere conocimiento en SQL, Python y R.
-            </p>
-          </div>
-          <button class="button-apply-job">Aplicar</button>
-        </article>
-
-        <article data-modalidad="guadalajara" class="job-listing-card">
-          <div>
-            <h3>Desarrollador de Aplicaciones Móviles</h3>
-            <small>Mobile Apps Ltd. | Guadalajara</small>
-            <p>
-              Buscamos un desarrollador de aplicaciones móviles con experiencia
-              en iOS y/o Android. El candidato debe tener conocimientos en
-              Swift, Kotlin y el desarrollo de interfaces de usuario.
-            </p>
-          </div>
-          <button class="button-apply-job">Aplicar</button>
-        </article>
-
-        <article data-modalidad="remoto" class="job-listing-card">
-          <div>
-            <h3>Ingeniero de DevOps</h3>
-            <small>Cloud Services SA | Remoto</small>
-            <p>
-              Estamos buscando un ingeniero de DevOps con experiencia en la
-              gestión de infraestructuras en la nube, automatización de procesos
-              y herramientas de integración continua. Se requiere conocimiento
-              en AWS, Azure o GCP.
-            </p>
-          </div>
-          <button class="button-apply-job">Aplicar</button>
-        </article>
+        <!-- Aquí se mostrarán los resultados de búsqueda de trabajos. Puedes agregar tarjetas de trabajo dinámicamente usando JavaScript para mostrar 
+         los detalles de cada oferta laboral, como el título del trabajo, la empresa, la ubicación y un enlace para postularse. -->
       </div>
 
       <nav class="pagination">
