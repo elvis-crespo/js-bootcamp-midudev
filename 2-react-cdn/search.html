@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="eS">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h2>Logo</h2>
+      <nav>
+        <a href="">Inicio</a>
+        <a href="">Empleos</a>
+      </nav>
+
+      <div style="display: flex; gap: 10px; align-items: center">
+        <button type="button">Subir cv</button>
+        <img
+          src="the-mandalorian-minimalist-uhdpaper.com-4K-7.766.jpg"
+          style="
+            border-radius: 100%;
+            overflow: hidden;
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            cursor: pointer;
+          "
+          alt=""
+          title="El camino así es"
+        />
+      </div>
+    </header>
+
+    <main style="padding: 16px 16px 0; margin-top: 0;">
+      <section style="height: auto; padding: 12px 0 12px 0;">
+        <h1>Encuenta tu próximo trabajo</h1>
+        <p>Aquí se mostrarán los resultados de tu búsqueda.</p>
+        <form role="search">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+              <path d="M21 21l-6 -6" />
+            </svg>
+            <input
+              type="text"
+              placeholder="Buscar trabajos, empresas o habilidades"
+            />
+          </div>
+        </form>
+      </section>
+      <div style="padding: 20px 24px">
+        <!-- Tecnología -->
+        <button class="filter-btn">
+          Tecnología
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="chevron"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+
+        <!-- Ubicación -->
+        <button class="filter-btn">
+          Ubicación
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="chevron"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+
+        <!-- Tipo de contrato -->
+        <button class="filter-btn">
+          Tipo de contrato
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="chevron"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+
+        <!-- Nivel de experiencia -->
+        <button class="filter-btn">
+          Nivel de experiencia
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="chevron"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+      </div>
+      <!-- 
+        <div style="display: flex; align-items: center; gap: 6px">
+          <p style="display: flex; align-items: center; gap: 6px">
+            Ubicación
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 9l6 6l6 -6" />
+            </svg>
+          </p>
+        </div> -->
+      <section style="padding: 20px 24px; border-radius: 12px">
+        <!-- <h3 style="margin-bottom: 12px;">Resultados de búsquedas</h3>
+        <div style="display: flex; align-items: center; justify-content: center; padding: 16px;
+          gap: 12px; border: 1px solid rgba(255, 255, 255, 0.12);">
+          <div>
+            <h4 style="font-weight: 500;">Ingeniero de Software</h4>
+            <h4 style="font-weight: 300; color: gray;">Tech Solutions Inc. | Remoto</h4>
+            <p style="font-weight: 300;">Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en Js, React y Node.js.
+              El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación
+            </p>
+          </div>
+          <div>
+            <button>Aplicar</button>
+          </div>
+        </div> -->
+        <div class="job-card">
+          <div class="job-content">
+            <h4 class="job-title">Ingeniero de Software</h4>
+            <span class="job-company">Tech Solutions Inc. | Remoto</span>
+            <p class="job-description">
+              Buscamos un ingeniero de software con experiencia en desarrollo
+              web y conocimientos en JavaScript, React y Node.js. El candidato
+              ideal debe ser capaz de trabajar en equipo y tener buenas
+              habilidades de comunicación.
+            </p>
+          </div>
+          <button class="job-button">Aplicar</button>
+        </div>
+
+        <div class="job-card">
+          <div class="job-content">
+            <h4 class="job-title">Analista de Datos</h4>
+            <span class="job-company">Data Driven Co. | Ciudad de México</span>
+            <p class="job-description">
+              Estamos buscando un analista de datos con experiencia en el manejo
+              de grandes conjuntos de datos y herramientas de visualización. Se
+              requiere conocimiento en SQL, Python y R.
+            </p>
+          </div>
+          <button class="job-button">Aplicar</button>
+        </div>
+
+        <div class="job-card">
+          <div class="job-content">
+            <h4 class="job-title">Desarrollador de Aplicaciones Móviles</h4>
+            <span class="job-company">Mobile Apps Ltd. | Guadalajara</span>
+            <p class="job-description">
+              Buscamos un desarrollador de aplicaciones móviles con experiencia
+              en iOS y/o Android. El candidato debe tener conocimientos en
+              Swift, Kotlin y desarrollo de interfaces de usuario.
+            </p>
+          </div>
+          <button class="job-button">Aplicar</button>
+        </div>
+
+        <div class="job-card">
+          <div class="job-content">
+            <h4 class="job-title">Ingeniero de DevOps</h4>
+            <span class="job-company">Cloud Services SA | Remoto</span>
+            <p class="job-description">
+              Estamos buscando un ingeniero de DevOps con experiencia en la
+              gestión de infraestructuras en la nube, automatización de procesos
+              y herramientas de integración continua. Se requiere conocimiento
+              en AWS, Azure o GCP.
+            </p>
+          </div>
+          <button class="job-button">Aplicar</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

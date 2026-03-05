@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>DevJobs</title>
+  </head>
+  <body>
+    <header>
+      <h2>Logo</h2>
+      <nav>
+        <a href="">Inicio</a>
+        <a href="">Empleos</a>
+      </nav>
+
+      <div style="display: flex; gap: 10px; align-items: center">
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border: 1px solid var(--border);
+            padding: 5px;
+            border-radius: 5px;
+            background-color: var(--primary);
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#94a3b8"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+          <input
+            type="text"
+            placeholder="Buscar en DevJobs"
+            style="border: none; outline: none; background-color: transparent"
+          />
+        </div>
+        <button type="button">Subir cv</button>
+        <img
+          src="the-mandalorian-minimalist-uhdpaper.com-4K-7.766.jpg"
+          style="
+            border-radius: 100%;
+            overflow: hidden;
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            cursor: pointer;
+          "
+          alt=""
+          title="El camino así es"
+        />
+      </div>
+    </header>
+    <div
+      style="
+        max-width: 1100px;
+        padding: 0 20px;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        color: var(--text-muted);
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+      "
+    >
+      <p>Empleos/Descripción del puesto</p>
+    </div>
+    <main style="max-width: 1100px; margin: 0 auto; padding: 0 20px">
+      <!-- <section style="display: flex; align-items: center; justify-content: space-around; flex-direction: row; gap: 20px;">
+            <div style="display: flex; flex-direction: column; gap: 10px;  align-items: flex-start;">
+                <h1 style="padding-top: 0%; font-size: xx-large; font-weight: 600;">Ingeniero de Software Senior</h1>
+                <h4 style="color: var(--text-muted); font-weight: 400;">Tech Solutions Inc. - Remoto</h4>
+            </div>
+            <div>
+                <button type="button">Aplicar ahora</button>
+            </div>
+        </section> -->
+      <section
+        style="
+          height: auto;
+          flex-direction: row;
+          display: flex;
+          justify-content: space-between;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+          "
+        >
+          <h1 style="font-size: xx-large; font-weight: 600">
+            Ingeniero de Software Senior
+          </h1>
+          <h4 style="color: var(--text-muted); font-weight: 400">
+            Tech Solutions Inc. - Remoto
+          </h4>
+        </div>
+        <div>
+          <button type="button">Aplicar ahora</button>
+        </div>
+      </section>
+      <section style="margin-top: 30px; line-height: 1.6; padding: 0">
+        <h3 style="color: var(--text-primary); font-weight: 500">
+          Descripción del puesto
+        </h3>
+        <p style="color: var(--text-secondary); font-weight: 400; margin: .5rem 0;">
+          Tech Solutions Inc. está buscando un Ingeniero de Software Senior
+          altamente motivado y experimentado para unirse a nuestro equipo
+          remoto. El candidato ideal tendrá una sólida formación en desarrollo
+          de software, con experiencia en el diseño, desarrollo e implementación
+          de soluciones de software escalables y de alto rendimiento. Como
+          Ingeniero de Software Senior, usted será responsable de liderar
+          proyectos de desarrollo, mentorizar a ingenieros junior y colaborar
+          con equipos multifuncionales para entregar productos de software de
+          alta calidad
+        </p>
+
+        <h3 style="color: var(--text-primary); font-weight: 500; margin-top: 1rem;">
+          Responsabilidades
+        </h3>
+        <ul
+          class="checklist"
+          style="color: var(--text-secondary); font-weight: 400;"
+        >
+          <li style="margin-top: .5rem;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M9 12l2 2l4 -4" />
+            </svg>
+            Diseñar, desarrollar y mantener aplicaciones web utilizando
+            tecnologías modernas.
+          </li>
+          <li style="margin-top: .5rem;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M9 12l2 2l4 -4" />
+            </svg>
+            Colaborar con equipos de producto y diseño para definir y entregar
+            nuevas características.
+          </li>
+          <li style="margin-top: .5rem;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M9 12l2 2l4 -4" />
+            </svg>
+            Escribir código limpio, eficiente y bien documentado.
+          </li>
+          <li style="margin-top: .5rem;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M9 12l2 2l4 -4" /></svg
+            >Realizar revisiones de código y proporcionar retroalimentación
+            constructiva a los miembros del equipo.
+          </li>
+        </ul>
+        <h3 style="color: var(--text-primary); font-weight: 500; margin-top: 1rem;">Requisitos</h3>
+        <ul
+          class="checklist"
+          style="color: var(--text-secondary); font-weight: 400"
+        >
+          <li style="margin-top: .5rem;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M9 12l2 2l4 -4" />
+            </svg>
+            Licenciatura en Informática o campo relacionado.
+          </li>
+          <li style="margin-top: .5rem;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M9 12l2 2l4 -4" />
+            </svg>
+            Mínimo de 5 años de experiencia en desarrollo de software.
+          </li>
+          <li style="margin-top: .5rem;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M9 12l2 2l4 -4" />
+            </svg>
+            Experiencia con frameworks de JavaScript (por ejemplo, React,
+            Angular, Vue.js).
+          </li>
+          <li style="margin-top: .5rem;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M9 12l2 2l4 -4" />
+            </svg>
+            Familiaridad con metodologías ágiles y herramientas de control de
+            versiones (por ejemplo, Git).
+          </li>
+        </ul>
+
+        <h3 style="color: var(--text-primary); font-weight: 500; margin-top: 1rem; ">
+          Acerca de la empresa
+        </h3>
+        <p style="color: var(--text-secondary); font-weight: 400; margin: .5rem 0;">
+          Tech Solutions Inc. es una empresa de tecnología innovadora que se
+          centra en la creación de soluciones de software de vanguardia para
+          diversas industrias. Estamos comprometidos con el fomento de un
+          entorno de trabajo colaborativo e inclusivo donde cada empleado pueda
+          prosperar y crecer profesionalmente. Ofrecemos salarios competitivos,
+          beneficios integrales y oportunidades de desarrollo profesional
+          continuo.
+        </p>
+
+        <div style="border: 1px solid var(--border); margin-top: 1rem"></div>
+        <div style="display: flex; justify-content: flex-end; margin-top: 1rem">
+          <button type="button">Aplicar ahora</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module">
+      import React from "https://esm.sh/react?dev";
+      import ReactDOM from "https://esm.sh/react-dom/client?dev";
+
+      window.React = React;
+      window.ReactDOM = ReactDOM;
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      // const title = React.createElement(
+      //   "h1",
+      //   { className: "title" },
+      //   "Hola, soy un título creado con React",
+      // );
+
+      const title = (
+        <h1 className="title">Hola, soy un título creado con React</h1>
+      );
+
+      function JobCard({ data, title, company, location, description }) {
+
+        // Estados
+        const [isApplied, setApplied] = React.useState(false);
+
+        function handleClick() {
+          setApplied(!isApplied);
+          console.log(isApplied);
+        } 
+
+        const text = isApplied ? "Applied" : "Apply";
+        const buttonClass = isApplied ? "is-applied" : ""; // declarativo
+
+        return (
+          <article 
+          className="job-listing-card"
+          data-modalidad={data?.modalidad}
+          data-nivel={data?.nivel}
+          data-technology={data?.technology}
+          >
+            <div>
+              <h3>{title}</h3>
+              <small>
+                {company} - {location}
+              </small>
+              <p>{description}</p>
+            </div>
+            <button className={`button-apply-job ${buttonClass}`} onClick={handleClick}>{text}</button>
+          </article>
+        );
+      }
+
+      function App() {
+        return (
+          <div className="jobs-listings">
+            <JobCard
+              title="Frontend Developer"
+              company="Tech Company"
+              location="Remote"
+              description="We are looking for a skilled frontend developer to join our team."
+              data={{
+                modalidad: "remote",
+                nivel: "junior",
+                technology: "react",
+              }}
+            />
+            <JobCard
+              title="Backend Developer"
+              company="Software Solutions"
+              location="New York, NY"
+              description="Join our backend team to work on exciting projects."
+            />
+            <JobCard
+              title="Full Stack Developer"
+              company="Innovative Start-up"
+              location="San Francisco, CA"
+              description="We need a versatile full stack developer to help us build our platform."
+            />
+            <JobCard
+              title="React Developer"
+              company="Web Agency"
+              location="Remote"
+              description="Seeking a React developer to create dynamic web applications."
+            />
+            <JobCard
+              title="Mobile Developer"
+              company="App Creators"
+              location="Remote"
+              description="Looking for a mobile developer to build cross-platform applications."
+            />
+          </div>
+        );
+      }
+
+      const rootElement = document.querySelector("#root");
+      const root = ReactDOM.createRoot(rootElement);
+      root.render(<App />);
+    </script>
+  </head>
+  <body>
+    <header>
+      <h2>Logo</h2>
+      <nav>
+        <a href="">Inicio</a>
+        <a href="">Empleos</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="jobs-search">
+        <h1>React.js</h1>
+      </section>
+      <section>
+        <h2>Empleos disponibles</h2>
+        <div id="root"></div>
+      </section>
+    </main>
+
+    <footer>
+      <small>&copy; 2025 JobFinder. Todos los derechos reservados.</small>
+    </footer>
+  </body>
+</html>
