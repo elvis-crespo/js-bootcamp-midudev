@@ -1,113 +1,39 @@
-// import "./index.css";
+import { useState } from "react";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import InputSearch from "./components/InputSearch";
+import JobList from "./components/JobList";
+import Pagination from "./components/Pagination";
+import jobsData from "./data.json";
+
+const RESULTS_PER_PAGE = 3;
 
 function App() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(jobsData.length / RESULTS_PER_PAGE);
+
+  const pagedResults = jobsData.slice(
+    (currentPage - 1) * RESULTS_PER_PAGE, // Índice de inicio pag 1 -> 0, pag 2 -> 5, pag 3 -> 10
+    currentPage * RESULTS_PER_PAGE, // Índice de fin pag 1 -> 5, pag 2 -> 10, pag 3 -> 15
+  )
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  }
+
   return (
     <>
-      <header>
-        <h2>Logo</h2>
-        <nav>
-          <a href="">Inicio</a>
-          <a href="">Empleos</a>
-        </nav>
-
-        {/* <div style="display: flex; gap: 10px; align-items: center"> */}
-        {/* <devjobs-avatar
-              service="github"
-              username="elvis-crespo"
-              size="40"
-              title="El camino así es"
-            ></devjobs-avatar>
-            <devjobs-avatar
-              service="x"
-              username=""
-              size="40"
-              title="El camino así es"
-            ></devjobs-avatar>
-            <devjobs-avatar
-              service="google"
-              username="google.com"
-              size="40"
-              title="El camino así es"
-            ></devjobs-avatar> */}
-        {/* </div> */}
-      </header>
+      <Header />
 
       <main>
         <section className="jobs-search">
           <h1>Encuentra tu próximo trabajo</h1>
           <p>Explora miles de oportunidades laborales en todo el mundo</p>
 
-          <form id="job-search-form" role="search">
-            <div className="search-bar">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="icon icon-tabler icons-tabler-outline icon-tabler-search"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-                <path d="M21 21l-6 -6" />
-              </svg>
-              <input
-                id="job-search-input"
-                type="text"
-                placeholder="Buscar trabajos, empresas o habilidades"
-              />
-            </div>
-
-            <div className="search-filters">
-              <select name="technology" id="filter-technology">
-                <option value="">Tecnología</option>
-
-                <optgroup label="Tecnologías populares">
-                  <option value="javascript">JavaScript</option>
-                  <option value="python">Python</option>
-                  <option value="java">Java</option>
-                </optgroup>
-                <hr />
-                <optgroup label="Frontend">
-                  <option value="react">React</option>
-                </optgroup>
-                <hr />
-                <optgroup label="Backend">
-                  <option value="nodejs">Node.js</option>
-                </optgroup>
-                <hr />
-                <option value="mobile">Mobile</option>
-              </select>
-
-              <select name="location" id="filter-location">
-                <option value="">Ubicación</option>
-                <option value="remoto">Remoto</option>
-                <option value="cdmx">Ciudad de México</option>
-                <option value="guadalajara">Guadalajara</option>
-                <option value="monterrey">Monterrey</option>
-                <option value="barcelona">Barcelona</option>
-              </select>
-
-              <select name="experience-level" id="filter-experience-level">
-                <option value="">Nivel de experiencia</option>
-                <option value="junior">Junior</option>
-                <option value="mid-level">Mid-Level</option>
-                <option value="senior">Senior</option>
-                <option value="lead">Lead</option>
-              </select>
-
-              <span id="filter-selected-value"></span>
-              <span id="filter-selected-value-experience-level"></span>
-              <span id="filter-selected-value-technology"></span>
-            </div>
-          </form>
+          <InputSearch />
         </section>
 
-        <div className="controls">
+        {/* <div className="controls">
           <div>
             <label>Resultados por página:</label>
             <select id="limitSelect">
@@ -126,57 +52,13 @@ function App() {
               <option value="desc">Z - A</option>
             </select>
           </div>
-        </div>
+        </div> */}
 
-        <div className="jobs-listings">
-          {/* Aquí se cargaran las ofertas de trabajo */}
-        </div>
-
-        <nav className="pagination">
-          <a href="#">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M15 6l-6 6l6 6" />
-            </svg>
-          </a>
-          <a className="is-active" href="#">
-            1
-          </a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a href="#">4</a>
-          <a href="#">5</a>
-          <a href="#">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l6 6l-6 6" />
-            </svg>
-          </a>
-        </nav>
+        <JobList jobs={pagedResults} />
+        <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
       </main>
 
-      <footer>
-        <small>&copy; 2025 JobFinder. Todos los derechos reservados.</small>
-      </footer>
+      <Footer />
     </>
   );
 }
